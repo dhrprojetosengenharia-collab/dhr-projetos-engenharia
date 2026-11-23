@@ -106,8 +106,15 @@ h2{font-size:40px;line-height:1.1;color:#0b2038;letter-spacing:-1px;margin-botto
 .contact{background:rgba(255,255,255,.94)}.contact-box{background:linear-gradient(125deg,#071525,#0d3150);border-radius:10px;padding:48px;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:50px}.contact-box h2{color:#fff}.contact-box p{color:#b9cad8}.contact-list{display:grid;gap:15px;margin-top:25px}.contact-list div{padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:14px}.contact-list span{display:block;color:#7890a6;font-size:10px;text-transform:uppercase;letter-spacing:1px}.form{display:grid;gap:12px}.form input,.form textarea,.form select{width:100%;padding:14px 15px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:5px;color:#fff;outline:none;font:inherit}.form select option{color:#162536}.form input::placeholder,.form textarea::placeholder{color:#8fa4b7}.form textarea{min-height:120px;resize:vertical}.form button{border:0;cursor:pointer}
 footer{background:#04101d;color:#8296aa;padding:30px 0}.footer{display:flex;justify-content:space-between;gap:20px;align-items:center}.footer strong{color:#fff}.footer small{font-size:11px}.footer-brand{display:flex;align-items:center;gap:14px}.footer-logo{width:48px;height:48px;border-radius:50%;object-fit:cover;flex:none}
 .wa-float{position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;padding:12px 18px;border-radius:999px;font-weight:800;box-shadow:0 8px 20px rgba(0,0,0,.25);z-index:60;font-size:14px}
+.piscinas{background:rgba(7,21,37,.95);color:#fff}.piscinas h2{color:#fff}.piscinas .section-head p{color:#a9bdcf}
+.video-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.video-card{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.video-card video,.video-soon{display:block;width:100%;aspect-ratio:16/9;background:#04101d}
+.video-soon{display:grid;place-items:center;text-align:center;padding:20px;background:linear-gradient(135deg,#0a2238,#123452);color:#8ddcff;font-size:12px;font-weight:800;letter-spacing:2px}
+.video-soon span{display:block;color:#91a4b7;font-size:13px;font-weight:600;letter-spacing:0;margin-top:6px}
+.video-info{padding:18px 22px 22px}.video-info small{color:#7fd5ff;font-weight:800;font-size:10px;letter-spacing:1.5px}.video-info h3{font-size:19px;margin:4px 0 6px}.video-info p{font-size:14px;color:#a9bdcf}
 @media(max-width:850px){
- nav{display:none}.menu-btn{display:block}.hero{min-height:680px;padding-top:125px}.trust-grid{grid-template-columns:1fr 1fr}.cards,.portfolio-grid{grid-template-columns:1fr 1fr}.bim-grid,.about-grid,.contact-box{grid-template-columns:1fr}.bim-grid,.about-grid{gap:35px}
+ nav{display:none}.menu-btn{display:block}.hero{min-height:680px;padding-top:125px}.trust-grid{grid-template-columns:1fr 1fr}.cards,.portfolio-grid{grid-template-columns:1fr 1fr}.bim-grid,.about-grid,.contact-box,.video-grid{grid-template-columns:1fr}.bim-grid,.about-grid{gap:35px}
 }
 @media(max-width:600px){
  .nav{height:68px}.mobile-menu{top:68px}.logo-mark{width:44px;height:44px}.hero{padding:115px 0 75px}.hero h1{font-size:43px}.hero p{font-size:16px}.trust-grid{grid-template-columns:1fr}.cards,.portfolio-grid{grid-template-columns:1fr}section{padding:68px 0}h2{font-size:32px}.contact-box{padding:30px 22px}.footer{flex-direction:column;align-items:flex-start}
@@ -164,7 +171,27 @@ body::after{content:"";position:fixed;inset:0;z-index:-1;background:rgba(244,247
       <article class="card"><div class="icon" style="width:auto;height:auto;min-height:45px;padding:10px 14px;font-size:13px;white-space:nowrap">Incêndio</div><h3>Combate e Detecção de Incêndio</h3><p>Soluções de segurança contra incêndio, detecção e alarme, integradas ao projeto da edificação.</p><a href="#contato">Solicitar orçamento →</a></article>
       <article class="card"><div class="icon" style="width:auto;height:auto;min-height:45px;padding:10px 14px;font-size:13px;white-space:nowrap">Estrutural</div><h3>Projetos Estruturais</h3><p>Concepção e detalhamento de estruturas em concreto armado, alvenaria e sistemas estruturais.</p><a href="#contato">Solicitar orçamento →</a></article>
       <article class="card"><div class="icon" style="width:auto;height:auto;min-height:45px;padding:10px 14px;font-size:13px;white-space:nowrap">Metálica</div><h3>Galpões Metálicos</h3><p>Projetos e soluções para estruturas metálicas, considerando funcionalidade, montagem e integração.</p><a href="#contato">Solicitar orçamento →</a></article>
-      <article class="card"><div class="icon" style="width:auto;height:auto;min-height:45px;padding:10px 14px;font-size:13px;white-space:nowrap">Piscinas</div><h3>Projetos de Piscinas</h3><p>Projetos estruturais e de instalações para piscinas, casa de máquinas e sistemas associados.</p><a href="#contato">Solicitar orçamento →</a></article>
+      <article class="card"><div class="icon" style="width:auto;height:auto;min-height:45px;padding:10px 14px;font-size:13px;white-space:nowrap">Piscinas</div><h3>Projetos de Piscinas</h3><p>Projetos estruturais e de instalações para piscinas, casa de máquinas e sistemas associados.</p><a href="#piscinas">Ver projeto em vídeo →</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="piscinas" id="piscinas">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Projetos de Piscinas</div><h2>Do modelo BIM à piscina pronta.</h2><p>Filtragem, aquecimento, iluminação e casa de máquinas projetados e compatibilizados no mesmo modelo, com documentação completa para a obra.</p></div>
+    <div class="video-grid">
+      <div class="video-card">
+        <video controls muted playsinline preload="metadata" poster="piscina-sistemas-capa.jpg">
+          <source src="piscina-sistemas.mp4" type="video/mp4">
+        </video>
+        <div class="video-info"><small>SISTEMAS</small><h3>Projeto dos sistemas da piscina</h3><p>Plantas, locação dos dispositivos, filtragem, aquecimento, iluminação e casa de máquinas em 3D.</p></div>
+      </div>
+      <div class="video-card">
+        <!-- RENDER: quando o vídeo estiver pronto, troque o bloco .video-soon abaixo por:
+        <video controls muted playsinline preload="metadata" poster="piscina-render-capa.jpg"><source src="piscina-render.mp4" type="video/mp4"></video> -->
+        <div class="video-soon"><div>RENDER EM BREVE<span>Visualização realista do projeto finalizado</span></div></div>
+        <div class="video-info"><small>RENDER</small><h3>Piscina finalizada</h3><p>Como a piscina fica depois de pronta, a partir do mesmo modelo BIM.</p></div>
+      </div>
     </div>
   </div>
 </section>
