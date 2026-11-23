@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="DHR Projetos e Engenharia: projetos multidisciplinares, BIM, estruturas, instalações elétricas e sistemas de segurança contra incêndio em São Paulo.">
+<meta name="description" content="DHR Projetos e Engenharia: projetos multidisciplinares, BIM, estruturas, elétrica, incêndio e plantas de residências para regularização de imóveis em São Paulo.">
+<meta name="keywords" content="planta para regularização de imóvel, planta de residência, regularização de imóvel, planta para escritura, levantamento de imóvel, projeto de regularização, engenheiro para regularização de imóvel, regularização de residência, planta baixa para regularização, projetos BIM, engenharia São Paulo">
 <meta property="og:title" content="DHR Projetos e Engenharia | BIM e Projetos Multidisciplinares">
 <meta property="og:description" content="Projetos de engenharia com precisão, tecnologia e integração BIM.">
 <meta property="og:type" content="website">
@@ -32,6 +33,17 @@
   "telephone": "+55 11 95856-7466",
   "address": { "@type": "PostalAddress", "addressLocality": "São Paulo", "addressRegion": "SP", "addressCountry": "BR" },
   "description": "Projetos multidisciplinares, BIM, estruturas, elétrica e combate a incêndio."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Plantas de residências para regularização de imóveis",
+  "serviceType": "Levantamento e planta para regularização de imóvel",
+  "description": "Levantamento de residências existentes e elaboração de planta baixa, cortes, fachadas, quadro de áreas e implantação para processos de regularização de imóveis junto à Prefeitura, com emissão de ART quando aplicável.",
+  "provider": { "@type": "LocalBusiness", "name": "DHR Projetos e Engenharia", "telephone": "+55 11 95856-7466" },
+  "areaServed": { "@type": "City", "name": "São Paulo" }
 }
 </script>
 <style>
@@ -91,6 +103,7 @@ h2{font-size:40px;line-height:1.1;color:#0b2038;letter-spacing:-1px;margin-botto
 .icon{width:45px;height:45px;border:1px solid #cfe0ec;border-radius:6px;display:grid;place-items:center;color:#1687d9;font-weight:900;font-size:12px;margin-bottom:22px}
 .card h3{font-size:19px;color:#10263c;margin-bottom:10px}.card p{font-size:14px;color:#718397;flex:1}
 .card a{margin-top:18px;color:#1687d9;font-weight:800;font-size:14px}
+.card-wide{grid-column:1/-1;min-height:0}.card-wide .icon{align-self:flex-start;width:100%!important;max-width:312px}.card-wide p{max-width:820px}
 .bim{background:rgba(244,247,250,.58)}
 .bim-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
 .bim-visual{min-height:430px;border-radius:10px;background:linear-gradient(145deg,#071525,#123452);position:relative;overflow:hidden;box-shadow:var(--shadow);border:1px solid #173b5b}
@@ -171,6 +184,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-2;background-image:linea
       <article class="card"><div class="icon" style="width:auto;height:auto;min-height:45px;padding:10px 14px;font-size:13px;white-space:nowrap">Estrutural</div><h3>Projetos Estruturais</h3><p>Concepção e detalhamento de estruturas em concreto armado, alvenaria e sistemas estruturais.</p><a href="#contato">Solicitar orçamento →</a></article>
       <article class="card"><div class="icon" style="width:auto;height:auto;min-height:45px;padding:10px 14px;font-size:13px;white-space:nowrap">Metálica</div><h3>Galpões Metálicos</h3><p>Projetos e soluções para estruturas metálicas, considerando funcionalidade, montagem e integração.</p><a href="#contato">Solicitar orçamento →</a></article>
       <article class="card"><div class="icon" style="width:auto;height:auto;min-height:45px;padding:10px 14px;font-size:13px;white-space:nowrap">Piscinas</div><h3>Projetos de Piscinas</h3><p>Projetos estruturais e de instalações para piscinas, casa de máquinas e sistemas associados.</p><a href="#piscinas">Ver projeto em vídeo →</a></article>
+      <article class="card card-wide"><div class="icon" style="width:auto;height:auto;min-height:45px;padding:10px 14px;font-size:13px;white-space:nowrap">Regularização</div><h3>Plantas de Residências para Regularização de Imóveis</h3><p>Levantamento da residência existente e elaboração de planta baixa, cortes, fachadas, quadro de áreas e implantação para o processo de regularização do imóvel junto à Prefeitura, com ART quando aplicável.</p><a href="#contato">Solicitar orçamento →</a></article>
     </div>
   </div>
 </section>
@@ -256,6 +270,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-2;background-image:linea
           <option>Projetos Estruturais</option>
           <option>Galpões Metálicos</option>
           <option>Projetos de Piscinas</option>
+          <option>Plantas para Regularização de Imóvel</option>
         </select>
         <textarea id="mensagem" placeholder="Conte brevemente sobre sua necessidade"></textarea>
         <button class="btn btn-primary" type="submit">Solicitar orçamento pelo WhatsApp</button>
