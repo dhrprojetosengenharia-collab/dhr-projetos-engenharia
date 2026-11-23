@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DHR Projetos e Engenharia — Projetos, BIM, compatibilização, instalações, estruturas, galpões metálicos, piscinas e sistemas de combate e detecção de incêndio.">
+<title>DHR Projetos e Engenharia | Engenharia • BIM • Tecnologia</title>
+<style>
+:root{
+  --bg:#07111f; --bg2:#0b1728; --card:#0e1e33; --line:#1c3554;
+  --text:#eef5ff; --muted:#9fb0c5; --accent:#27b3ff; --accent2:#6be0ff;
+  --max:1180px; --radius:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}
+button,input,textarea,select{font:inherit}
+.container{width:min(92%,var(--max));margin:auto}
+header{position:fixed;top:0;left:0;width:100%;z-index:50;background:rgba(7,17,31,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.5px}
+.logo-mark{width:39px;height:39px;border:2px solid var(--accent);display:grid;place-items:center;border-radius:10px;position:relative}
+.logo-mark:after{content:"";width:14px;height:14px;border:2px solid var(--accent2);transform:rotate(45deg);position:absolute}
+.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:26px;font-size:14px;color:#cbd7e6}
+.navlinks a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 20px;border-radius:10px;border:1px solid var(--accent);color:#06111e;background:var(--accent);font-weight:800;font-size:13px;transition:.25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 35px rgba(39,179,255,.22)}
+.btn.ghost{background:transparent;color:var(--text);border-color:#31516f}
+.menu{display:none;background:none;border:0;color:white;font-size:28px}
+.hero{min-height:100vh;padding-top:76px;display:grid;align-items:center;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(39,179,255,.16),transparent 67%);right:-180px;top:60px}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:55px 55px;mask-image:linear-gradient(to bottom,black,transparent 85%);pointer-events:none}
+.hero-content{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}
+.kicker{color:var(--accent);font-weight:800;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:20px}
+h1{font-size:clamp(42px,6vw,78px);line-height:.98;letter-spacing:-3px;max-width:780px}
+h1 em{font-style:normal;color:var(--accent)}
+.lead{font-size:18px;color:var(--muted);max-width:650px;margin:25px 0 31px}
+.actions{display:flex;gap:13px;flex-wrap:wrap}
+.hero-visual{min-height:430px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,#0d2038,#081424);position:relative;overflow:hidden;box-shadow:0 30px 90px rgba(0,0,0,.28)}
+.model{position:absolute;inset:55px 45px;transform:perspective(800px) rotateX(55deg) rotateZ(-38deg);border:1px solid #2b79a5;background:linear-gradient(135deg,rgba(39,179,255,.14),rgba(107,224,255,.02));box-shadow:0 0 50px rgba(39,179,255,.08)}
+.model:before,.model:after{content:"";position:absolute;inset:12%;border:1px solid rgba(107,224,255,.4)}
+.model:after{inset:28%;border-color:rgba(39,179,255,.7)}
+.beam{position:absolute;height:3px;background:var(--accent);box-shadow:0 0 18px rgba(39,179,255,.7);opacity:.85}
+.b1{width:65%;right:5%;top:28%}.b2{width:48%;left:8%;top:55%;transform:rotate(25deg)}.b3{width:58%;right:10%;bottom:22%;transform:rotate(-15deg)}
+.badge{position:absolute;background:#09182a;border:1px solid #2b4b68;border-radius:12px;padding:12px 15px;font-size:12px;color:#c8d7e7}
+.badge strong{display:block;color:white;font-size:17px}.bim{top:28px;right:28px}.coord{bottom:30px;left:28px}
+section{padding:105px 0}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:42px}
+.eyebrow{color:var(--accent);font-weight:800;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+h2{font-size:clamp(30px,4vw,50px);line-height:1.05;letter-spacing:-1.8px;margin-top:10px}
+.section-head p{max-width:470px;color:var(--muted)}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.card{background:linear-gradient(180deg,rgba(14,30,51,.95),rgba(8,20,35,.95));border:1px solid var(--line);border-radius:var(--radius);padding:28px;min-height:235px;transition:.3s}
+.card:hover{transform:translateY(-5px);border-color:#2e668f}
+.icon{width:45px;height:45px;border:1px solid #2d6389;border-radius:12px;display:grid;place-items:center;color:var(--accent);font-weight:900;margin-bottom:23px}
+.card h3{font-size:19px;margin-bottom:10px}.card p{color:var(--muted);font-size:14px}
+.card a{display:inline-block;margin-top:20px;color:var(--accent);font-size:13px;font-weight:800}
+.dark-band{background:linear-gradient(120deg,#081522,#0b1d32);border-top:1px solid #112b45;border-bottom:1px solid #112b45}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.step{padding:24px 28px;border-left:1px solid var(--line)}
+.step:first-child{border-left:0}.num{font-size:42px;color:#214c6c;font-weight:900}.step h3{margin:8px 0}.step p{color:var(--muted);font-size:14px}
+.portfolio{display:grid;grid-template-columns:1.25fr .75fr;gap:18px}
+.project{min-height:330px;border:1px solid var(--line);border-radius:20px;overflow:hidden;position:relative;background:linear-gradient(135deg,#0d2940,#071525)}
+.project.small{min-height:156px}.project:before{content:"";position:absolute;inset:0;background-image:linear-gradient(110deg,transparent 35%,rgba(39,179,255,.18),transparent 65%),linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:auto,35px 35px,35px 35px}
+.project-content{position:absolute;left:24px;bottom:23px;z-index:2}.project span{color:var(--accent);font-size:11px;font-weight:800;letter-spacing:1.5px}.project h3{font-size:23px;margin-top:5px}
+.side{display:grid;gap:18px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.stat{background:#091729;padding:25px}.stat b{font-size:32px;color:var(--accent);display:block}.stat span{font-size:12px;color:var(--muted)}
+.cta{display:grid;grid-template-columns:1fr .9fr;gap:45px;align-items:start}
+.cta-copy p{color:var(--muted);margin-top:17px;max-width:620px}
+.form{background:#091729;border:1px solid var(--line);border-radius:20px;padding:26px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}
+label{font-size:11px;color:#b9c8d9;font-weight:700}input,select,textarea{background:#071321;border:1px solid #1d3853;color:white;padding:12px;border-radius:8px;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--accent)}textarea{min-height:105px;resize:vertical}.form .btn{width:100%;margin-top:15px}
+footer{border-top:1px solid var(--line);padding:35px 0;color:#8092a8;font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px}.brand{color:white;font-weight:800}
+@media(max-width:900px){
+.navlinks{display:none}.menu{display:block}.hero-content,.cta{grid-template-columns:1fr}.hero{padding-top:120px}.hero-visual{min-height:350px}.services{grid-template-columns:1fr 1fr}.portfolio{grid-template-columns:1fr}.process{grid-template-columns:1fr 1fr}.step:nth-child(3){border-left:0}.stats{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+h1{font-size:46px}.section-head{display:block}.section-head p{margin-top:15px}.services,.process{grid-template-columns:1fr}.step{border-left:0;border-top:1px solid var(--line)}.step:first-child{border-top:0}.stats{grid-template-columns:1fr 1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.foot{display:block}.foot div+div{margin-top:12px}.hero-visual{min-height:300px}.model{inset:45px 28px}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="container nav">
+<a class="logo" href="#inicio"><div class="logo-mark"></div><div>DHR <span>ENGENHARIA</span></div></a>
+<nav class="navlinks">
+<a href="#servicos">Serviços</a><a href="#bim">BIM</a><a href="#portfolio">Portfólio</a><a href="#processo">Processo</a><a href="#orcamento">Orçamento</a>
+</nav>
+<a class="btn" href="#orcamento">Solicitar orçamento</a>
+<button class="menu">☰</button>
+</div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+<div class="grid"></div>
+<div class="container hero-content">
+<div>
+<div class="kicker">DHR Projetos e Engenharia</div>
+<h1>Engenharia que conecta <em>projeto, BIM e tecnologia.</em></h1>
+<p class="lead">Soluções técnicas para edificações, infraestrutura e sistemas prediais, com foco em compatibilização, precisão e eficiência.</p>
+<div class="actions"><a class="btn" href="#orcamento">Solicitar orçamento →</a><a class="btn ghost" href="#servicos">Explorar serviços</a></div>
+</div>
+<div class="hero-visual">
+<div class="model"></div><div class="beam b1"></div><div class="beam b2"></div><div class="beam b3"></div>
+<div class="badge bim"><strong>BIM</strong>Coordenação multidisciplinar</div>
+<div class="badge coord"><strong>360°</strong>Visão integrada do projeto</div>
+</div>
+</div>
+</section>
+
+<section id="servicos">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">Especialidades</div><h2>Engenharia para decisões melhores.</h2></div><p>Atuação técnica integrada para reduzir conflitos, melhorar a documentação e dar mais previsibilidade ao projeto.</p></div>
+<div class="services">
+<div class="card"><div class="icon">01</div><h3>BIM & Compatibilização</h3><p>Modelagem, coordenação, auditoria e compatibilização multidisciplinar para reduzir conflitos e melhorar a qualidade dos projetos.</p><a href="#orcamento">Solicitar serviço →</a></div>
+<div class="card"><div class="icon">02</div><h3>Projetos Elétricos</h3><p>Projetos e soluções para instalações elétricas prediais, distribuição, iluminação, tomadas e infraestrutura.</p><a href="#orcamento">Solicitar serviço →</a></div>
+<div class="card"><div class="icon">03</div><h3>Combate e Detecção de Incêndio</h3><p>Projetos de sistemas de segurança contra incêndio, detecção e alarme, conforme requisitos técnicos e normas aplicáveis.</p><a href="#orcamento">Solicitar serviço →</a></div>
+<div class="card"><div class="icon">04</div><h3>Projetos Estruturais</h3><p>Concepção, análise e detalhamento de estruturas de concreto armado, fundações e soluções estruturais.</p><a href="#orcamento">Solicitar serviço →</a></div>
+<div class="card"><div class="icon">05</div><h3>Galpões Metálicos</h3><p>Projetos e soluções para galpões e estruturas metálicas, incluindo concepção, dimensionamento e detalhamento.</p><a href="#orcamento">Solicitar serviço →</a></div>
+<div class="card"><div class="icon">06</div><h3>Projetos de Piscinas</h3><p>Projetos e soluções para piscinas, casa de máquinas, sistemas hidráulicos e estruturas associadas.</p><a href="#orcamento">Solicitar serviço →</a></div>
+</div></div>
+</div>
+</section>
+
+<section class="dark-band" id="bim">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">BIM na prática</div><h2>Encontre o conflito antes da obra.</h2></div><p>Arquitetura, estrutura e instalações podem ser coordenadas em um ambiente integrado para antecipar problemas e melhorar a tomada de decisão.</p></div>
+<div class="process">
+<div class="step"><div class="num">01</div><h3>Receber</h3><p>Modelos, desenhos, memoriais e requisitos do empreendimento.</p></div>
+<div class="step"><div class="num">02</div><h3>Coordenar</h3><p>Integração das disciplinas e verificação das condições do modelo.</p></div>
+<div class="step"><div class="num">03</div><h3>Detectar</h3><p>Identificação e classificação de interferências e inconsistências.</p></div>
+<div class="step"><div class="num">04</div><h3>Resolver</h3><p>Relatórios e direcionamento técnico para decisões de projeto.</p></div>
+</div>
+</div>
+</section>
+
+<section id="portfolio">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">Portfólio</div><h2>Projetos que podem virar resultados.</h2></div><p>Área preparada para apresentar projetos, estudos, imagens BIM, relatórios e cases autorizados.</p></div>
+<div class="portfolio">
+<div class="project"><div class="project-content"><span>CASE • BIM</span><h3>Coordenação multidisciplinar</h3></div></div>
+<div class="side"><div class="project small"><div class="project-content"><span>CASE • ELÉTRICA</span><h3>Infraestrutura predial</h3></div></div><div class="project small"><div class="project-content"><span>CASE • TELECOM</span><h3>Rede e conectividade</h3></div></div></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="stats">
+<div class="stat"><b>BIM</b><span>Modelagem e coordenação</span></div>
+<div class="stat"><b>360°</b><span>Visão multidisciplinar</span></div>
+<div class="stat"><b>RVT</b><span>Fluxo orientado a dados</span></div>
+<div class="stat"><b>IFC</b><span>Interoperabilidade</span></div>
+</div>
+</div>
+</section>
+
+<section id="orcamento">
+<div class="container cta">
+<div class="cta-copy"><div class="eyebrow">Solicite uma proposta</div><h2>Conte o que você precisa. A DHR avalia o escopo.</h2><p>Envie as informações iniciais do empreendimento. O formulário foi pensado para reduzir idas e vindas e acelerar a avaliação técnica.</p><p style="margin-top:25px;color:#d8e5f2"><strong>Ideal para:</strong> construtoras, incorporadoras, escritórios de arquitetura, empresas de engenharia e clientes que precisam de projetos e apoio técnico especializado.</p></div>
+<form class="form" onsubmit="enviar(event)">
+<div class="form-grid">
+<div class="field"><label>NOME / EMPRESA</label><input id="nome" required placeholder="Seu nome"></div>
+<div class="field"><label>WHATSAPP</label><input id="whatsapp" required placeholder="(11) 99999-9999"></div>
+<div class="field"><label>E-MAIL</label><input id="email" type="email" required placeholder="voce@empresa.com"></div>
+<div class="field"><label>TIPO DE SERVIÇO</label><select id="servico"><option>BIM / Compatibilização</option><option>Projetos Elétricos</option><option>Combate e Detecção de Incêndio</option><option>Projetos Estruturais</option><option>Galpões Metálicos</option><option>Projetos de Piscinas</option><option>Consultoria Técnica</option></select></div>
+<div class="field"><label>ÁREA APROXIMADA</label><input id="area" placeholder="Ex.: 5.000 m²"></div>
+<div class="field"><label>PRAZO DESEJADO</label><input id="prazo" placeholder="Ex.: 30 dias"></div>
+<div class="field full"><label>DESCREVA O PROJETO</label><textarea id="mensagem" placeholder="Tipo de empreendimento, disciplinas envolvidas, situação atual e o que você precisa."></textarea></div>
+</div>
+<button class="btn" type="submit">Enviar solicitação →</button>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container foot">
+<div><div class="brand">DHR PROJETOS E ENGENHARIA</div><div>Projetos • BIM • Compatibilização • Engenharia</div></div>
+<div>São Paulo — SP • <a href="#orcamento">Solicitar orçamento</a></div>
+</div>
+</footer>
+
+<script>
+function enviar(e){
+ e.preventDefault();
+ const nome=document.getElementById('nome').value;
+ const whatsapp=document.getElementById('whatsapp').value;
+ const email=document.getElementById('email').value;
+ const servico=document.getElementById('servico').value;
+ const area=document.getElementById('area').value;
+ const prazo=document.getElementById('prazo').value;
+ const mensagem=document.getElementById('mensagem').value;
+ const texto=`Olá, DHR Projetos e Engenharia!%0A%0AQuero solicitar uma proposta.%0A%0ANome/Empresa: ${nome}%0AWhatsApp: ${whatsapp}%0AE-mail: ${email}%0AServiço: ${servico}%0AÁrea: ${area}%0APrazo: ${prazo}%0A%0ADetalhes: ${mensagem}`;
+ window.open('https://wa.me/5511964851888?text='+texto,'_blank');
+}
+</script>
+</body>
+</html>
